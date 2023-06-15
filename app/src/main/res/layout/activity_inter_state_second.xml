@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data/>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F9F9F9">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/interStateHeaderTxt"
+            android:textColor="@color/gun_metal"
+            android:textSize="17sp"
+            android:text="@string/second_inter_state1"
+            android:padding="10dp"
+            android:lineSpacingExtra="3dp"
+            android:background="@drawable/background_box"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#F9F9F9"
+            app:layout_constraintBottom_toTopOf="@+id/ll1"
+            app:layout_constraintTop_toBottomOf="@+id/interStateHeaderTxt"
+            android:id="@+id/scrollView3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:background="#F9F9F9">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/interStateMsgTxt"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:text="@string/desc_txt"
+                    android:lineSpacingExtra="3dp"
+                    android:padding="15dp"
+                    android:gravity="center"
+                    android:visibility="visible" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/danger_view"
+                    android:isScrollContainer="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/interStateMsgTxt"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:id="@+id/interstateOptionLayout"
+                    android:layout_below="@+id/danger_view"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/interstateAlertBelowHeader"
+                        android:id="@+id/interStateBelowHeaderTxt"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="16sp"
+                        android:padding="5dp" />
+
+                    <CheckBox
+                        android:id="@+id/chk_terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:buttonTint="@color/base_color"
+                        android:checked="false"
+                        android:gravity="top"
+                        android:text="@string/second_inter_state2"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="13sp"
+                        android:layout_below="@+id/interStateBelowHeaderTxt" />
+
+                    <CheckBox
+                        android:id="@+id/chk_terms1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:checked="false"
+                        android:buttonTint="@color/base_color"
+                        android:gravity="top"
+                        android:textSize="13sp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/second_inter_state3"
+                        android:textColor="@color/gun_metal"
+                        android:layout_below="@+id/chk_terms" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/chk_terms2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/base_color"
+                        android:checked="false"
+                        android:textSize="13sp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/second_inter_state4"
+                        android:textColor="@color/gun_metal"
+                        android:gravity="top"
+                        android:layout_below="@+id/chk_terms1" />
+
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/chk_terms3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/base_color"
+                        android:textSize="13sp"
+                        android:layout_marginTop="5dp"
+                        android:checked="false"
+                        android:text="@string/second_inter_state5"
+                        android:textColor="@color/gun_metal"
+                        android:gravity="top"
+                        android:layout_below="@+id/chk_terms2" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/chk_terms4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/base_color"
+                        android:textSize="13sp"
+                        android:checked="false"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/second_inter_state6"
+                        android:textColor="@color/gun_metal"
+                        android:gravity="top"
+                        android:layout_below="@+id/chk_terms3" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/chk_terms5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/base_color"
+                        android:textSize="13sp"
+                        android:checked="false"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/second_inter_state7"
+                        android:textColor="@color/gun_metal"
+                        android:gravity="top"
+                        android:layout_below="@+id/chk_terms4" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/signed_by"
+                        style="@style/style_15_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/second_inter_state8"
+                        android:textColor="@color/black"
+                        android:layout_below="@+id/chk_terms5" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/f_name"
+                        style="@style/spinner_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingStart="10dp"
+                        android:hint="@string/second_inter_state9"
+                        android:drawablePadding="10dp"
+                        android:layout_below="@+id/signed_by" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/l_name"
+                        style="@style/spinner_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingStart="10dp"
+                        android:hint="@string/second_inter_state10"
+                        android:drawablePadding="10dp"
+                        android:layout_below="@+id/f_name" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/cancel"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_weight=".5"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:id="@+id/cancelBtn"
+                android:background="@drawable/gray_background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/accept"
+                android:textSize="16sp"
+                android:layout_weight=".5"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:layout_marginEnd="10dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:id="@+id/acceptBtn"
+                android:background="@drawable/gray_background" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

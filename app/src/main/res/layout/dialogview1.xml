@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_marginStart="40dp"
+    android:layout_marginEnd="40dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/white_background"
+    >
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/dialogMessageText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:lineSpacingExtra="3dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="25dp"
+        android:singleLine="false"
+        android:textColor="@color/text_color1"
+        android:textSize="15dp" />
+
+
+    <ImageView
+        android:id="@+id/dialogDoneBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/remove_icon" />
+
+    <Button
+        android:id="@+id/okBtn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogMessageText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/roundedskybluebg"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Ok"
+        android:textColor="@drawable/textcolorselector" />
+</RelativeLayout>

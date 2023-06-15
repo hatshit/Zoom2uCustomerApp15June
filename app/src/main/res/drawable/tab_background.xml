@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/white_background" android:state_enabled="true" />
+    <item   android:drawable="@color/signup_text_background_color"  android:state_enabled="false" />
+</selector>

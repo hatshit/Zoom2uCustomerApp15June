@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="310dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/price_border"
+    >
+
+
+    <TextView
+        android:id="@+id/price_type"
+        android:layout_width="match_parent"
+        style="@style/style_15_bold"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:gravity="center_vertical"
+        android:paddingStart="15dp"
+        android:text="Same day"
+        android:textColor="@color/base_color"
+
+  />
+
+
+
+    <TextView
+        android:id="@+id/price_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="center_vertical"
+        android:paddingStart="15dp"
+        android:text="Delivery will be picked up and delivered within the requested time frame. Please ensure that both locations will be open during these hours as we are not able to guarantee an earlier collection or delivery time on this service."
+        android:layout_below="@+id/price_type"
+        android:textColor="@color/gun_metal"
+        android:textSize="14sp"
+        android:layout_marginBottom="10dp"/>
+
+
+</RelativeLayout>

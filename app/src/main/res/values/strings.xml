@@ -1,0 +1,323 @@
+<resources>
+    <string name="app_name">Zoom2u</string>
+    <string name="place_api_key">AIzaSyBKwJd0d1w6Bpi1yfE_MRY3MuHmkG7fEWE</string>
+    <string name="google_api_ke">AIzaSyDXy3Z6OzAQ3siNfARS3Y54-sbhNQSBL0U</string>
+
+    <!--common-->
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="edit">Edit</string>
+    <string name="document">Document</string>
+    <string name="courier">COURIER</string>
+    <string name="next">Next</string>
+    <string name="weigh1">Weight</string>
+
+    <!--login text-->
+    <string name="login_txt_header">Zoom2u connects you with local drivers in your area for fast same day deliveries.</string>
+    <string name="email_header">Email</string>
+    <string name="pass_header">Password</string>
+    <string name="login">Login</string>
+    <string name="forget_pass">Forgot password?</string>
+    <string name="register"> Register</string>
+
+    <!--sign text-->
+    <string name="create_acc">Create a New Account</string>
+    <string name="name_header">Name*</string>
+    <string name="last_name_header">Last Name*</string>
+    <string name="company_header">Company</string>
+    <string name="phone_header">Phone Number*</string>
+    <string name="email_header_login">Email*</string>
+    <string name="pass_header_login">Password"</string>
+    <string name="confirm_pass_header_login">Confirm Password"</string>
+    <string name="find_us">How did you find us?</string>
+    <string name="term_con">I Accept the customer </string>
+
+    <string name="sign_up">Sign up</string>
+    <string name="already_acc">Already have an account?</string>
+    <string name="sign_in"> Sign in</string>
+    <string name="signup_error_msg">Something went wrong Please try again.</string>
+
+    <!--home page-->
+    <string name="home_header">What would you like to send today?</string>
+    <string name="delivery_redesigned">Delivery, Redesigned.</string>
+    <string name="home_text">At zoom2u we know how important it is to know where your parcel is and when it will be delivered.</string>
+    <string name="get_a_quote">Get a Quote</string>
+    <string name="make_a_booking">Make another booking</string>
+    <!--profile page-->
+    <string name="my_profile">My Profile</string>
+    <string name="my_location">Saved Locations</string>
+    <string name="change_pass">Change Password</string>
+    <string name="sign_out">Sign Out</string>
+
+    <!--my location-->
+    <string name="no_my_location">No locations saved yet.</string>
+    <string name="default_drop">| DEFAULT DROP-OFF</string>
+    <string name="default_pick">| DEFAULT PICK-UP</string>
+    <string name="save_your_place">Save your favourite places</string>
+    <string name="add_new">Add New</string>
+
+    <!--add edit location-->
+    <string name="location_name">Contact name and business*</string>
+    <string name="email_address">Email address</string>
+    <string name="contact_number">Contact number*</string>
+    <string name="address">Address*</string>
+    <string name="pickup_location">Set as default pick-up location.</string>
+    <string name="drop_location">Set as default drop-off location.</string>
+    <string name="remove">Remove</string>
+    <string name="save_location">Save Location</string>
+    <string name="find_me">Find me</string>
+    <string name="save">Save</string>
+
+    <!--change password-->
+    <string name="current_pass">Current password*</string>
+    <string name="new_pass">New password*</string>
+    <string name="new_pass_cnfrm">New password confirmation*</string>
+
+
+    <!--Delivery History-->
+    <string name="delivery_history">Delivery History</string>
+    <string name="no_delivery_history">Delivery history is empty!</string>
+
+    <!--history status-->
+    <string name="picked_up">Picked Up</string>
+    <string name="delivery">Delivery</string>
+    <string name="accepted">Accepted</string>
+    <string name="dropped_off">Dropped Off</string>
+
+
+    <!--history details-->
+    <string name="delivery_details">Delivery details</string>
+    <string name="pick_up_details">Pick-up Details</string>
+    <string name="drop_off_details">Drop-off Details</string>
+    <string name="pickup">Pickup</string>
+    <string name="timing">Timing</string>
+    <string name="requested">(Requested)</string>
+    <string name="Drop_off">DropOff</string>
+    <string name="actual">(Actual)</string>
+    <string name="notes">Notes</string>
+    <string name="add_delivery_details">Add Delivery Details</string>
+
+
+    <!--home page-->
+
+
+    <!--Delivery Details-->
+    <string name="delivery_details1">Delivery Details</string>
+    <string name="pickup_details">PickUp details</string>
+    <string name="contact_name">Contact name*</string>
+    <string name="company_name">Company name</string>
+    <string name="level_suit">Level/Unit/Suit number</string>
+    <string name="instruction">Any special delivery instructions</string>
+    <string name="house">House/Apartment</string>
+    <string name="pick_check1">Send SMS Tracking Link to Pickup Person</string>
+    <string name="pick_check2">This is no-contact pickup</string>
+    <string name="pick_check2_desc">(please provide a phone number above and provide notes regarding the location of the package)</string>
+    <string name="dropOff_details1">DropOff details</string>
+    <string name="drop_check1">This is a no-contact delivery (please provide authority to leave details below)</string>
+    <string name="drop_check2">Authority to Leave (ATL)</string>
+    <string name="drop_check2_desc">(please provide a phone number above and provide notes regarding the location of the package)</string>
+    <string name="commercial">Commercial</string>
+    <string name="parcel_after">Shipment available after</string>
+    <string name="parcel_after_txt">(Your parcel will be picked up and delivered within the requested window, it may not be at this exact time)</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="required_before">Required before</string>
+    <string name="weight">Total Shipment Weight</string>
+    <string name="weight_txt">Select total weight(kg)*</string>
+    <string name="weight_desc">(Total weight cannot exceed 100kg, and each item cannot exceed 30kg. This is for the health and safety of our drivers. If you require extra large items moved, please use the Bid Requests feature!)</string>
+    <string name="items_we_not_send">Items we cannot send interstate</string>
+    <string name="string_not_send">Authority to Leave at</string>
+    <string name="package_type">Is the package a laptop or mobile phone ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="other">Other (please specify)</string>
+
+
+    <!--Doc and Dimension-->
+    <string name="documents_dimension">Documents Dimension</string>
+    <string name="quantity">Quantity*</string>
+    <string name="x">x</string>
+    <string name="item_weight">Item Weight*</string>
+    <string name="kg">kg</string>
+    <string name="total_weight">Total Weight*</string>
+    <string name="length">Length*</string>
+    <string name="cm">cm</string>
+    <string name="width">Width*</string>
+    <string name="height">Height*</string>
+    <string name="confirm">Confirm</string>
+
+
+    <!--Pricing and payment-->
+    <string name="select">Select</string>
+    <string name="pricing_payment">Pricing and Payment</string>
+    <string name="delivery_feature">Show Delivery Features</string>
+    <string name="quotes_valid">Your quotes are valid for </string>
+    <string name="expired_quote">Your quotes have expired. Please click here to generate new quotes.</string>
+    <string name="proceed_to_payment">Proceed to payment</string>
+
+    <!--Booking Confirmation-->
+    <string name="booking_confirmation">Booking Confirmation</string>
+    <string name="my_package">My package</string>
+    <string name="delivery_time">Delivered by</string>
+    <string name="booking_confirmation_term_con">I Accept the customer terms and conditions.</string>
+    <string name="total">Total</string>
+    <string name="min">minutes</string>
+
+
+    <!--order confirmed-->
+    <string name="your_booking_number">Your booking number</string>
+    <string name="order_confirmed">Order Confirmed</string>
+    <string name="what_next">What’s next?</string>
+    <string name="what_next_text">Keep an eye on your smartphone or computer for three email/messages from. They are:</string>
+    <string name="details_eta">Courier’s details and ETA</string>
+    <string name="drop_off_confirmation">Dropoff confirmation and invoice</string>
+    <string name="want_5_credit">Want a $5 credit?</string>
+    <string name="wantACreditDetails">Tweet or share us on Facebook to earn a $5 credit towards your next delivery.</string>
+
+
+    <!--on hold-->
+    <string name="textDetails1">Why is my booking on hold ?</string>
+    <string name="textDetails2">Thank you for your booking. We have it recorded in our system, but have placed it on hold as the credit card details that you entered failed the authorisation process.</string>
+    <string name="textDetails3">This may be because the details you entered are incorrect, or authorisation for this purchase has been rejected by your bank.</string>
+    <string name="textDetails4">Your package will not be picked up while the booking is on hold.</string>
+    <string name="textDetails5">Please enter or add an alternative payment method below in order to make your booking active. We accept MasterCard, Visa and Amex.</string>
+    <string name="txtChangePayment">Change payment method</string>
+    <string name="text_details7">If you have any queries, please email us at</string>
+    <string name="text_details8"><u>deliveries@zoom2u.com.au</u></string>
+    <string name="activate_my_booking">Activate My Booking</string>
+
+
+    <!-- Interstate alert view text -->
+    <string name="interstateAlertHeader">Thanks for using Zoom2u for your interstate delivery</string>
+    <string name="interstateAlertHeaderroadinterstate">Thanks for using Zoom2u for your interstate road delivery</string>
+    <string name="interstateMsgTxt">Please note your delivery will go on a Qantas flight. Once it arrives at the destination airport our couriers can collects the parcel 20 minutes after arrival. \n\nIf the item is at the airport prior to 10am Qantas will deliver it to destination airport on the same day. If it’s after 10am there is still a good chance it will be delivered on the same day however it is not guaranteed. \n\nIf your item is extremely important and needs to be delivered same day Qantas does offer a next flight service, this will cost an additional $95 on your delivery. This means that once your parcel arrives at the airport 1 hour form this time it can go on the next available flight to your destination. If you like this option please place the booking and call our office on 1300 966 628 or email deliveries@zoom2u.com \n\nAir freight can be delayed, airports can close and there is a lot that is outside of our control. We therefore unfortunately cannot guarantee this service, that being said 99% of our customers are very happy with this service.</string>
+    <string name="interstateMsgTxtroadInterstate">Please note if this an urgent delivery it recommended that you use our air service as this service only operate during weekdays.This delivery service uses the Greyhound bus network to deliver parcels interstate. Our Zoom2u courier will pickup your parcel on arrival and deliver directly to you.</string>
+    <string name="interstateAlertBelowHeader">To help with delivery please make sure</string>
+    <string name="interstateAlertPoint1">Your parcel is marked for Zoom2u with the destination airport.</string>
+    <string name="interstateAlertPoint2">If it’s a small item place it in a larger box so it can’t be lost.</string>
+    <string name="interstateAlertPoint3">Make your parcel is packaged extremely well so it can’t be damaged.</string>
+    <string name="interstateAlertPoint4">Make sure the destination address is available after 5pm.</string>
+    <!-- Interstate alert view text -->
+
+    <!--inter state second screen-->
+
+    <string name="desc_txt">Any substance which, as presented for transport, is liable to explode, dangerously react, produce a flame or, dangerous emission of toxic, corrosive or flammable gases or vapours under conditions normally encountered in transport must not be sent interstate under any circumstance.The following is a non-comprehensive list of goods which cannot be accepted for interstate delivery: aerosols, hair tonic/hair sprays, batteries, explosives, corrosives, perfume, massage oils, pressurised or unpressurised cylinders and/or similar type containers, firearms and ammunition, radioactive material, paint fuel and/or fuel tanks etc.</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="title_activity_maps1">Map</string>
+    <string name="email_error">Please enter a email address</string>
+    <string name="error_invalid_email">Please enter valid email address.</string>
+    <string name="password_error">Please enter a password.</string>
+    <string name="error_invalid_password">Please enter a minimum password of 6 characters.</string>
+    <string name="reset_pass">Reset your Password</string>
+    <string name="reset_pass_txt">Enter your Email and we\'ll send you a link to reset your password.</string>
+    <string name="enter_email">Enter your Email</string>
+    <string name="reset_pass1">Reset Password</string>
+
+
+    <string name="title_activity_bottom_navigation">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="booking">Booking</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+    <string name="bids">Bids</string>
+
+
+    <string name="_3">3</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="cancel_booking">Cancel Booking</string>
+    <string name="close">Close</string>
+    <string name="view_delivery_details">View Delivery Details</string>
+    <string name="_4">4</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept">Accept</string>
+    <string name="second_inter_state1">Many seemingly harmless goods can be dangerous on board an aircraft.</string>
+    <string name="second_inter_state2">I hereby declare that my shipment does not contain any of the above products, any item that would not be permitted in checked luggage on a passenger flight or any other dangerous good as outlined by IATA regulations.</string>
+    <string name="second_inter_state3">Where possible, any old labelling has been removed to avoid any confusion or missorting during processing and shipping - This includes address, shipping and special handling labels.</string>
+    <string name="second_inter_state4">I understand that, in the unlikely event my package is lost or damaged, Zoom2u can cover up to $300 in damages - This coverage will be void if my package is fragile or insufficiently packaged.</string>
+    <string name="second_inter_state5">I understand that, in the unlikely event my package is lost or damaged, Zoom2u can cover up to $300 in damages - This coverage will be void if my package is fragile or insufficiently packaged.</string>
+    <string name="second_inter_state6">I acknowledge this consignment may travel by air and make this statement for the purpose of section 23A of the Civil Aviation Act.</string>
+    <string name="second_inter_state7">I understand that I am personally responsible for the above statements and that misdeclaring goods or knowingly or recklessly making false or misleading statement is a statutory offence punishable by imprisonment and/or a fine and may render me liable in damages - Including the return of my items at my expense.</string>
+    <string name="second_inter_state8">Signed by:</string>
+    <string name="second_inter_state9">First name (required)...</string>
+    <string name="second_inter_state10">Last name (required)...</string>
+    <string name="first_inter_state1">My package does not contain batteries of any kind.</string>
+    <string name="first_inter_state2">My package is not fragile, delicate, or can be easily damaged.</string>
+    <string name="first_inter_state3">My parcel has been packaged well to avoid any light bumps caused during general handling. If the item is small it has been placed in a larger box to minimise any chance of it being lost in transit.</string>
+
+    <!--use of & in string help-->
+    <string name="package_signature"><![CDATA[Package Image & Signature]]></string>
+    <string name="track_your_booking">Track your booking</string>
+    <string name="quote_request">Quote Request</string>
+    <string name="describe_shipment">Describe Shipment</string>
+
+    <string name="image_of_freight_png_jpg_or_pdf">Image of Freight (.png, .jpg)</string>
+    <string name="click_hear_upload_photos">Click here to upload photos</string>
+    <string name="submit_quote_req">Submit quote request</string>
+    <string name="the_appropriate_label_has_been_attached_label_for_laptops_and_mobile_phones_can_be_downloaded_here">The appropriate label has been attached (Label for laptops and mobile phones can be downloaded here).</string>
+    <string name="packaging">Packaging</string>
+    <string name="packing_term1">Item will be in original packaging.</string>
+    <string name="item_will_be_packaged_not_in_original_packaging">Item will be packaged (Not in original packaging)</string>
+    <string name="packing_term2">Item will not be packaged. (Please note: This option will void any damage cover for this delivery. Items sent without packaging are at the customers own risk.)</string>
+    <string name="deliver_before">Deliver before</string>
+    <string name="parcel_drop_text">(Your parcel will be dropped off and delivered within the requested window, it may not be at this exact time.)</string>
+    <string name="minutes">minutes.</string>
+    <string name="not_available">Not Available</string>
+    <string name="register_text">Don\'t have an account?Register</string>
+    <string name="cancel_booking1">Cancel Booking</string>
+    <string name="quote_confirm1">All available couriers will be notified of your request, and will reply (usually within minutes) with individual pricing and time frames.</string>
+    <string name="quote_txt4">Your courier will then collect and deliver your items!</string>
+    <string name="quote_txt2">You can see these offers below, and we\'ll email you a summary too!</string>
+    <string name="request_confirmed">Request Confirmed</string>
+    <string name="quote_request_received">Quote request received</string>
+    <string name="what_s_next">What’s next?</string>
+    <string name="quote_txt3">You pick which offer will be most appealing to you.</string>
+    <string name="quotes">Quotes</string>
+    <string name="go_to_offers">Go to offers</string>
+    <string name="offers">Offers</string>
+    <string name="images">Images</string>
+    <string name="bid_request">Bid Request</string>
+    <string name="pickup_eta">Pickup ETA</string>
+    <string name="last_completed_a_delivery_on">Last completed a delivery on</string>
+    <string name="drop_eta">Drop ETA</string>
+    <string name="registered_with_zoom2u_on">Registered with Zoom2u on</string>
+    <string name="no_active_bid_found">You have no bookings with active bid.</string>
+    <string name="delivery_notes">Delivery notes</string>
+    <string name="package_notes">Package notes</string>
+    <string name="update_details">Update details</string>
+    <string name="make_a1_booking">Make a booking</string>
+    <string name="term_con2">I have read, and accept, the customer terms and conditions as well as the chain of responsibility policy.</string>
+    <string name="term_con3">I Accept the customer<a href="https://www.zoom2u.com.au/customer-terms/"> terms and conditions</a> and<a href="https://www.freightmatch.com.au/chain-of-responsibility/"> chain of responsibility policy.</a></string>
+    <string name="term_con1">I Accept the customer<a href="https://www.zoom2u.com.au/customer-terms/"> terms and conditions.</a></string>
+    <string name="diver_txt">Drivers will be bidding on your work in a matter of seconds.</string>
+    <string name="bids_will_appear_here_as_they_come_in">Bids will appear here as they come in.</string>
+    <string name="rate_your_delivery">Rate your delivery</string>
+    <string name="pickup_address">Pickup address</string>
+    <string name="deliver_address">Deliver address</string>
+    <string name="how_did_we_do_today">How did we do today?</string>
+    <string name="no_my_location1">Create them above for a \nfaster booking process!</string>
+    <string name="my_location1">Save your most common sending and receiving \nlocations here, and then select them when creating \nnew bookings for faster, smoother experience.</string>
+    <string name="you_have_no_bookings_with_completed_bid">You have no bookings with completed bid.</string>
+    <string name="suggest_a_price_here">Suggest a price here!</string>
+    <string name="enter_your_preferred_pick_up_and_drop_off_times_and_negotiate_a_price_with_couriers_on_the_platform">Enter your preferred pick up and drop off times, and negotiate a price with couriers on the platform!</string>
+    <string name="this_tool_will_help_you_select_a_custom_price_for_your_booking_when_yourself_or_the_courier_is_happy_with_the_price_the_booking_will_be_confirmed">This tool will help you select a custom price for your booking! When yourself, or the courier, is happy with the price, the booking will be confirmed.</string>
+    <string name="price_in_aud">Price in (AUD$)</string>
+    <string name="available_after">Available after</string>
+    <string name="deliver_by">Deliver By</string>
+    <string name="suggest_this_price">Suggest this price</string>
+    <string name="choose_your_own_price">Choose your own price!</string>
+    <string name="notes1">Notes:</string>
+    <string name="request_pricing">Request pricing</string>
+    <string name="suggest_price">Click here to understand how this works</string>
+    <string name="booking_summary">Booking summary</string>
+    <string name="your_parcel_will_be_picked_up_and_delivered_within_the_requested_window_it_may_not_be_at_this_exact_time">(Your parcel will be picked up and delivered within the requested window, it may not be at this exact time)</string>
+    <string name="request_quotes">Request Quotes</string>
+    <string name="drop_off">Drop Off</string>
+    <string name="availability_amp_delivery"><![CDATA[Availability & Delivery]]></string>
+
+</resources>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent_cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <include
+            android:id="@id/zoom2u_header"
+            layout="@layout/zoom2u_top_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/shadow_top"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/header_txt"
+                style="@style/style_15_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Payment details"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+          <!--  <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/next_ll"
+                app:layout_constraintTop_toBottomOf="@id/header_txt">
+-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/next_ll"
+                    app:layout_constraintTop_toBottomOf="@id/header_txt">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/empty_view"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/pay_by_invoice"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/icon"
+                            android:layout_width="100dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/zoom2u_courier_offers_gray"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/parcel_txt1"
+                            style="@style/style_15_bold"
+                            android:paddingStart="45dp"
+                            android:paddingEnd="45dp"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Your payment details are protected by industry-standard 256-bit encryption."
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/icon" />
+
+
+                      <!--  <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/parcel_txt"
+                            style="@style/style_13_bold"
+                            android:textColor="@color/base_color"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="15dp"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/bids_will_appear_here_as_they_come_in"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/parcel_txt1" />-->
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/pay_by_invoice"
+                        style="@style/style_15_bold"
+                        android:layout_width="0dp"
+                        android:visibility="gone"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/chip_black_background"
+                        android:text="Pay by invoice"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+          <!--  </ScrollView>-->
+
+
+            <LinearLayout
+                android:id="@+id/next_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:elevation="40dp"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+                <LinearLayout
+                    android:id="@+id/pricing_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:elevation="40dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                   <!-- <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:id="@+id/info"
+                            android:src="@drawable/ic_info_icon"
+                           />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/terms_con1"
+                            style="@style/style_13_bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Your payment details are protected by industry standard 256-bit encryption."
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/term"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+
+                        <CheckBox
+                            android:id="@+id/chk_terms"
+                            style="@style/style_13_bold"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:buttonTint="@color/base_color" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/terms_con"
+                            style="@style/style_13_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/term_con1"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/next_btn"
+                            style="@style/style_15_bold"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/chip_background"
+                            android:text="Complete purchase"
+                            android:textAllCaps="false"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            app:layout_constraintEnd_toStartOf="@+id/final_price"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/final_price"
+                            style="@style/style_15_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="35sp"
+                            android:layout_gravity="end"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

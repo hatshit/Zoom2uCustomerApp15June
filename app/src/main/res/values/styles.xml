@@ -1,0 +1,174 @@
+<resources>
+
+    <style name="AppTheme.Splash" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <!-- Base application theme. -->
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#00848d</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+
+    <style name="style_15_bold" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/arimo_bold</item>
+        <item name="android:textSize">@dimen/large_sec_text</item>
+        <item name="android:color">@color/txt_sub_color</item>
+    </style>
+
+
+    <style name="style_15_regular" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/arimo_regular</item>
+        <item name="android:textSize">@dimen/large_sec_text</item>
+        <item name="android:color">@color/txt_sub_color</item>
+        <item name="android:inputType">none</item>
+    </style>
+
+
+
+    <style name="style_13_regular" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/arimo_regular</item>
+        <item name="android:textSize">@dimen/medium_txt</item>
+        <item name="android:color">@color/txt_sub_color</item>
+    </style>
+
+    <style name="style_13_bold" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/arimo_bold</item>
+        <item name="android:textSize">@dimen/medium_txt</item>
+        <item name="android:color">@color/txt_sub_color</item>
+    </style>
+
+    <style name="style_11_regular" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/arimo_regular</item>
+        <item name="android:textSize">@dimen/medium_txt_low</item>
+        <item name="android:color">@color/txt_sub_color</item>
+    </style>
+
+    <style name="style_11_bold" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/arimo_bold</item>
+        <item name="android:textSize">@dimen/medium_txt_low</item>
+        <item name="android:color">@color/txt_sub_color</item>
+    </style>
+
+    <style name="style_9_regular" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/arimo_regular</item>
+        <item name="android:textSize">@dimen/low_text</item>
+        <item name="android:color">@color/txt_sub_color</item>
+    </style>
+
+    <style name="style_9_bold" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/arimo_bold</item>
+        <item name="android:textSize">@dimen/low_text</item>
+        <item name="android:color">@color/txt_sub_color</item>
+    </style>
+
+    <style name="login_signup_text" parent="TextAppearance.AppCompat">
+        <item name="android:background">@drawable/text_background</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="color">@color/black</item>
+    </style>
+
+
+    <style name="spinner_text" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/arimo_bold</item>
+        <item name="android:background">@drawable/text_background1</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="color">@color/black</item>
+    </style>
+
+
+    <style name="spinner_text_regular" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/arimo_regular</item>
+        <item name="android:background">@drawable/text_background1</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="color">@color/black</item>
+    </style>
+
+    <style name="spinner_text1" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/arimo_bold</item>
+        <item name="android:background">@drawable/text_background1</item>
+        <item name="android:textSize">13sp</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyCustomTabText</item>
+        <item name="tabSelectedTextColor">@color/black</item>
+    </style>
+
+    <style name="MyCustomTabText" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/body_font_color</item>
+    </style>
+
+
+    <style name="progressbarstyle" parent="android:Theme.Holo.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:textColorPrimary">@color/base_color</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:textColor">@color/base_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/sub_header_textsize</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/arimo_regular</item>
+    </style>
+
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@android:color/transparent</item>
+        <item name="android:bottomDark">@android:color/transparent</item>
+        <item name="android:bottomMedium">@android:color/transparent</item>
+        <item name="android:centerBright">@android:color/transparent</item>
+        <item name="android:centerDark">@android:color/transparent</item>
+        <item name="android:centerMedium">@android:color/transparent</item>
+        <item name="android:fullBright">@android:color/transparent</item>
+        <item name="android:fullDark">@android:color/transparent</item>
+        <item name="android:topBright">@android:color/transparent</item>
+        <item name="android:topDark">@android:color/transparent</item>
+    </style>
+
+    <style name="DialogSlideAnim" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slideup</item>
+        <item name="android:windowExitAnimation">@anim/slidebottom</item>
+    </style>
+
+    <style name="bottom_text">
+        <item name="android:textColor">@drawable/bottom_text</item>
+        <item name="android:fontFamily">@font/arimo_bold</item>
+    </style>
+
+
+
+    <style name="Theme.AppCompat.Transparent.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="CustomTextAppearanceTab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/arimo_bold</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+</resources>
+
+
+

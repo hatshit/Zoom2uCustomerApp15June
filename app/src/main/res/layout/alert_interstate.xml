@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F9F9F9">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/interStateHeaderTxt"
+        android:textColor="@color/gun_metal"
+        android:textSize="17sp"
+        android:text="@string/interstateAlertHeader"
+        android:padding="10dp"
+        android:lineSpacingExtra="3dp"
+        android:background="@drawable/background_box"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#F9F9F9"
+        app:layout_constraintBottom_toTopOf="@+id/ll1"
+        app:layout_constraintTop_toBottomOf="@+id/interStateHeaderTxt"
+        android:id="@+id/scrollView3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:background="#F9F9F9">
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/interStateMsgTxt"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:text="@string/interstateMsgTxt"
+                android:lineSpacingExtra="3dp"
+                android:padding="15dp"
+                android:gravity="center|left"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/interstateOptionLayout"
+                android:layout_below="@+id/interStateMsgTxt"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp">
+
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interstateAlertBelowHeader"
+                    android:id="@+id/interStateBelowHeaderTxt"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="16sp"
+                    android:padding="5dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/interstateAlrtPoint1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/interStateBelowHeaderTxt"
+                    android:background="@drawable/circle_blue"
+                    android:text="@string/_1"
+                    android:layout_marginTop="7dp"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:layout_marginStart="3dp" />
+
+                <TextView
+                    android:id="@+id/interstateAlrtPoint1Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interstateAlertPoint1"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_alignTop="@+id/interstateAlrtPoint1"
+                    android:layout_toEndOf="@+id/interstateAlrtPoint1"
+                    android:layout_marginStart="7dp" />
+
+                <TextView
+                    android:id="@+id/interstateAlrtPoint2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/interstateAlrtPoint1Txt"
+                    android:background="@drawable/circle_blue"
+                    android:text="@string/_2"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:layout_marginStart="3dp" />
+
+                <TextView
+                    android:id="@+id/interstateAlrtPoint2Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interstateAlertPoint2"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_alignTop="@+id/interstateAlrtPoint2"
+                    android:layout_toEndOf="@+id/interstateAlrtPoint2"
+                    android:layout_marginStart="7dp" />
+
+                <TextView
+                    android:id="@+id/interstateAlrtPoint3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/interstateAlrtPoint2Txt"
+                    android:background="@drawable/circle_blue"
+                    android:text="@string/_3"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:layout_marginStart="3dp" />
+
+                <TextView
+                    android:id="@+id/interstateAlrtPoint3Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interstateAlertPoint3"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_alignTop="@+id/interstateAlrtPoint3"
+                    android:layout_toEndOf="@+id/interstateAlrtPoint3"
+                    android:layout_marginStart="7dp" />
+
+                <TextView
+                    android:id="@+id/interstateAlrtPoint4"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/interstateAlrtPoint3Txt"
+                    android:background="@drawable/circle_blue"
+                    android:text="@string/_4"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:layout_marginStart="3dp" />
+
+                <TextView
+                    android:id="@+id/interstateAlrtPoint4Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interstateAlertPoint4"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_alignTop="@+id/interstateAlrtPoint4"
+                    android:layout_toEndOf="@+id/interstateAlrtPoint4"
+                    android:layout_marginStart="7dp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/cancel"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_weight=".5"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:id="@+id/cancelBtnInterStateDialog"
+            android:background="@drawable/gray_background"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/accept"
+            android:textSize="16sp"
+            android:layout_weight=".5"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:id="@+id/acceptBtnInterStateDialog"
+            android:background="@drawable/roundedskybluebg"
+            />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

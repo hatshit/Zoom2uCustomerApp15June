@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_200">#00A7E2</color>
+    <color name="teal_700">#00A7E2</color>
+    <color name="black">#FF000000</color>
+    <color name="red">#ff0000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="text_color">#90ffffff</color>
+    <color name="base_color">#00A7E2</color>
+    <color name="txt_sub_color">#8C9293</color>
+    <color name="body_font_color">#737D7E</color>
+    <color name="card_view_color">#edeeef</color>
+    <color name="light_sky">#F0FFFF</color>
+    <color name="line_color">#DCDCDC</color>
+    <color name="picked_up">#FFD100</color>
+    <color name="signup_text_background_color">#F5F5F5</color>
+    <color name="text_color1">#374350</color>
+    <color name="calender_txt_color">#7c86a2</color>
+    <color name="color_cyan">#2B93FF</color>
+    <color name="light_green">#5EAC40</color>
+    <color name="green_color">#76D750</color>
+    <color name="gun_metal">#45515b</color>
+    <color name="gray">#d8d8d8</color>
+
+    <color name="light_gary">#EDF1FC</color>
+    <color name="light_gary_1">#F8FAFF</color>
+    <color name="white_blue">#F0F8FF</color>
+    <color name="light_gary_heading">#F5FFFA</color>
+</resources>

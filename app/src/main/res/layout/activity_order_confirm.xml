@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data/>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.application.bottom_navigation.home.booking_confirmation.order_confirm_hold.OrderConfirmActivity">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/base_color"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/close"
+                style="@style/style_15_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/close"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/zoom2u_header"
+                android:layout_width="90dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/zoom2u_icon_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/shadow_top"
+            android:elevation="10dp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/next_ll"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/header_txt"
+                    style="@style/style_15_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/order_confirmed"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                     />
+
+                <LinearLayout
+                        android:id="@+id/LinearBooking"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="22dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_below="@+id/header_txt"
+                        android:background="@drawable/orderconfirmed"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/yourBookingNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:text="@string/your_booking_number"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/yourBookingNumberTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:textColor="#ffffff"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/ImportantText"
+                        android:layout_width="309dp"
+                        android:layout_height="82dp"
+                        android:layout_alignEnd="@+id/LinearBooking"
+                        android:layout_alignStart="@+id/LinearBooking"
+                        android:layout_below="@id/LinearBooking"
+                        android:layout_marginBottom="23dp"
+                        android:layout_marginTop="13dp"
+                        android:gravity="center"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/topDefaultView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/ImportantText"
+                        android:background="@color/gray" />
+
+
+                <TextView
+                    android:id="@+id/whatNextTxt"
+                    android:layout_width="wrap_content"
+                    style="@style/style_15_bold"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/topDefaultView1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/what_next"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/what_next_txt"
+                    style="@style/style_11_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/whatNextTxt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="@string/what_next_text"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="12sp" />
+
+                <View
+                    android:id="@+id/topDefaultView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/what_next_txt"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:id="@+id/rel1"
+                    android:layout_width="match_parent"
+                    android:layout_height="103dp"
+                    android:layout_below="@id/topDefaultView2">
+
+                    <TextView
+                        android:id="@+id/btn1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:background="@drawable/circle_blue"
+                        android:text="@string/_1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/bookingConf"
+                        style="@style/style_13_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/booking_confirmation"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/topDefaultView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/bookingConf"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@color/gray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="103dp"
+                    android:layout_below="@id/rel1">
+
+                    <TextView
+                        android:id="@+id/btn2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/circle_blue"
+                        android:text="@string/_2"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/courierDetETA"
+                        style="@style/style_13_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/details_eta"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/topDefaultView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/courierDetETA"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@color/gray" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel3"
+                    android:layout_width="match_parent"
+                    android:layout_height="103dp"
+                    android:layout_below="@id/rel2">
+
+                    <TextView
+                        android:id="@+id/btn3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/circle_blue"
+                        android:text="@string/_3"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/dropOffConfInvoice"
+                        style="@style/style_13_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/drop_off_confirmation"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+<!--
+                <RelativeLayout
+                    android:id="@+id/rel4"
+                    android:layout_width="match_parent"
+                    android:layout_height="182dp"
+                    android:layout_below="@id/rel3"
+                    android:background="#f9f9f9">
+
+                    <TextView
+                        android:id="@+id/wantACredit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/style_13_bold"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="118dp"
+                        android:layout_marginRight="118dp"
+                        android:layout_marginTop="29dp"
+                        android:text="@string/want_5_credit"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/wantACreditDetails"
+                        style="@style/style_11_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/wantACredit"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="53dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="53dp"
+                        android:text="@string/wantACreditDetails"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:layout_marginTop="14dp"
+                        android:layout_below="@id/wantACreditDetails"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="162dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/facebook" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="162dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/twitter" />
+                    </LinearLayout>
+                </RelativeLayout>-->
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/next_ll"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:elevation="40dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/view_delivery_details"
+                style="@style/style_15_bold"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/chip_background"
+                android:text="@string/make_a_booking"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent_cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.zoom2u_customer.ui.application.bottom_navigation.home.map_page.doc_dimension.DocDimensionActivity">
+
+        <include
+            android:id="@id/zoom2u_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/zoom2u_top_header"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/shadow_top"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="-193dp">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/header_txt"
+                style="@style/style_15_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/quote_request"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/ll1"
+                app:layout_constraintTop_toBottomOf="@+id/header_txt">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/pickup_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/white_background"
+                        android:elevation="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/price_txt"
+                            style="@style/style_13_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:text="Please enter the dimensions of the item below"
+                            android:textColor="@color/base_color"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                        <androidx.core.widget.NestedScrollView
+                            android:id="@+id/scrollView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:scrollbars="vertical"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/price_txt">
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/item_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                 />
+
+                        </androidx.core.widget.NestedScrollView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/add_item_btn"
+                            style="@style/style_13_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/chip_black_background"
+                            android:text="+ Add item"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/scrollView1"/>
+
+
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/white_background"
+                    android:elevation="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/purchase_order_txt"
+                        style="@style/style_13_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Purchase Order#"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/purchase_order"
+                        style="@style/spinner_text_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:padding="10dp"
+                        android:hint="Purchase Order"
+                        android:minWidth="200dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/purchase_order_txt" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card2"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/white_background"
+                    android:elevation="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card3">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/truck_type_txt"
+                        style="@style/style_13_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Truck type"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/packagingGroup"
+                        android:layout_marginBottom="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/truck_type_txt"
+                        app:layout_constraintStart_toStartOf="parent">
+
+
+
+                        <RadioButton
+                            android:id="@+id/first_pack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:buttonTint="@color/base_color"
+                            android:gravity="center_vertical"
+                            android:text="Semi Trailer"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            />
+
+
+                        <RadioButton
+                            android:id="@+id/sec_pack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:buttonTint="@color/base_color"
+                            android:gravity="center_vertical"
+                            android:text="B-Double"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                         />
+
+
+                        <RadioButton
+                            android:id="@+id/third_pack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:buttonTint="@color/base_color"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:text="Other"
+
+                           />
+
+
+
+                    </RadioGroup>
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/card1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/white_background"
+                        android:elevation="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card2">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/freight_title_txt"
+                            style="@style/style_13_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="Freight Title* "
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/freight_title"
+                            style="@style/spinner_text_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:padding="10dp"
+                            android:hint="eg. Bulk Building Material"
+                            android:minWidth="200dp"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/freight_title_txt" />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/freight_value_txt"
+                            style="@style/style_13_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="What is the freight value?*"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/freight_title" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/freight_value"
+                            style="@style/spinner_text_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:padding="10dp"
+                            android:hint="$"
+                            android:inputType="numberDecimal"
+                            android:minWidth="200dp"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/freight_value_txt" />
+
+
+                        <LinearLayout
+                            android:id="@+id/vehicle_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/freight_value">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/vehicle_brand_txt"
+                                style="@style/style_13_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="Vehicle Brand* :"
+                                android:textColor="@color/black"
+                                />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vehicle_brand"
+                                style="@style/spinner_text_regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_margin="5dp"
+                                android:drawablePadding="10dp"
+                                android:padding="10dp"
+                                android:minWidth="200dp"
+                                android:textColor="@color/black"
+                                />
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/vehicle_model_txt"
+                                style="@style/style_13_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="Vehicle Model* :"
+                                android:textColor="@color/black"
+                                />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vehicle_model"
+                                style="@style/spinner_text_regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_margin="5dp"
+                                android:padding="10dp"
+                                android:hint="Model"
+                                android:minWidth="200dp"
+                                android:textColor="@color/black"
+                                />
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/vehicle_drivel"
+                                style="@style/style_13_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center"
+                                android:text="Is the vehicle drivable?"
+                                android:textColor="@color/black"
+                                />
+                            <CheckBox
+                                android:id="@+id/vehicle_drivel_check"
+                                style="@style/style_13_regular"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="5dp"
+                                android:buttonTint="@color/base_color"
+                                android:gravity="center_vertical"
+                                android:text="Vehicle is drivable"
+                                />
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/vehicle_belongings_txt"
+                                style="@style/style_13_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center"
+                                android:text="Are there any belongings with your vehicle?"
+                                android:textColor="@color/black"
+                                />
+
+
+                            <RadioGroup
+                                android:id="@+id/vehicle_belonging"
+                                android:layout_width="fill_parent"
+                                android:layout_height="35dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                              >
+
+                                <RadioButton
+                                    android:id="@+id/empty_vehicle"
+                                    style="@style/style_13_regular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="35dp"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/base_color"
+                                    android:checked="true"
+                                    android:text="Empty vehicle"
+                                    android:textColor="@color/black" />
+
+                                <RadioButton
+                                    android:id="@+id/vehicle_belonging_check"
+                                    style="@style/style_13_regular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="35dp"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/base_color"
+                                    android:text="Vehicle with belongings"
+                                    android:textColor="@color/black" />
+
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/container_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/vehicle_ll">
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/rent_container"
+                                style="@style/style_13_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="I will need to rent a container :"
+                                android:textColor="@color/black"
+                                />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/rent_container1"
+                                style="@style/style_13_regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center"
+                                android:text="(Leave this blank if you will provide your own)"
+                                android:textColor="@color/black"
+                                />
+
+
+                            <RadioButton
+                                android:id="@+id/yes_rent_container"
+                                style="@style/style_13_regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/base_color"
+                                android:text="Yes, I will need a container provided please."
+                                android:textColor="@color/black" />
+
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/maritime_security_id_txt"
+                                style="@style/style_13_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="Maritime Security ID Card Number"
+                                android:textColor="@color/black"
+                                />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/maritime_security_id"
+                                style="@style/spinner_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_margin="5dp"
+                                android:drawablePadding="10dp"
+                                android:paddingLeft="10dp"
+                                android:hint="Make"
+                                android:minWidth="200dp"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                />
+
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/describe_shipment_txt"
+                            style="@style/style_13_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="Describe Shipment"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/container_ll" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/describe_shipment"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/location_box"
+                            android:gravity="top"
+                            android:hint="Heavy &amp; Bulk Building material that need extra assistance"
+                            android:inputType="textMultiLine"
+                            android:padding="8dp"
+                            android:scrollbars="vertical"
+                            android:textSize="12sp"
+                            app:layout_constraintTop_toBottomOf="@+id/describe_shipment_txt" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/delivery_instructions_txt"
+                            style="@style/style_13_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="Delivery Instructions"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/describe_shipment" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/delivery_instructions"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/location_box"
+                            android:gravity="top"
+                            android:hint="Any special delivery instruction"
+                            android:inputType="textMultiLine"
+                            android:padding="8dp"
+                            android:scrollbars="vertical"
+                            android:textSize="12sp"
+                            app:layout_constraintTop_toBottomOf="@+id/delivery_instructions_txt" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/image_text"
+                            style="@style/style_13_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="@string/image_of_freight_png_jpg_or_pdf"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/delivery_instructions" />
+
+
+                        <HorizontalScrollView
+                            android:id="@+id/scr"
+                            android:layout_width="fill_parent"
+                            android:layout_height="90dp"
+                            android:layout_margin="5dp"
+                            android:scrollbars="none"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/image_text">
+
+                            <LinearLayout
+                                android:id="@+id/linearForImageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="90dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imv1"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/graphic_photo" />
+
+                                <ImageView
+                                    android:id="@+id/imv2"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/graphic_photo" />
+
+                                <ImageView
+                                    android:id="@+id/imv3"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/graphic_photo" />
+
+                                <ImageView
+                                    android:id="@+id/imv4"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/graphic_photo" />
+
+                                <ImageView
+                                    android:id="@+id/imv5"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/graphic_photo" />
+                            </LinearLayout>
+                        </HorizontalScrollView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/upload_image"
+                            style="@style/style_15_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/click_hear_upload_photos"
+                            android:textColor="@color/base_color"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/scr" />
+
+
+                        <View
+                            android:id="@+id/blank_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            app:layout_constraintTop_toBottomOf="@+id/upload_image"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        app:layout_constraintTop_toBottomOf="@+id/card1"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:elevation="40dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/term"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp">
+
+
+                    <CheckBox
+                        android:id="@+id/chk_terms"
+                        style="@style/style_13_bold"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:buttonTint="@color/base_color" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/terms_con"
+                        style="@style/style_13_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/term_con3"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/submit_quotes_req"
+                    style="@style/style_15_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/chip_background"
+                    android:text="@string/submit_quote_req"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

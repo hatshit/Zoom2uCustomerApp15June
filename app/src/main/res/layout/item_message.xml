@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <data/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/chat_date"
+            style="@style/style_11_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:visibility="gone"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/body_font_color"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/rcv_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chat_date"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="50dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:visibility="gone">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rcv_msg"
+                style="@style/style_11_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/recive_msg"
+                android:gravity="center_vertical"
+                android:minWidth="70dp"
+                android:minHeight="40dp"
+                android:padding="10dp"
+                android:textColor="@color/black" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/rcv_dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/profile"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="3dp" />
+
+            <TextView
+                android:id="@+id/recive_time"
+                style="@style/style_9_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rcv_msg"
+                android:layout_marginTop="5dp"
+                android:text="Mon,Oct 21"
+                android:layout_marginStart="25dp"
+                android:textColor="@color/body_font_color" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/sender_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="2dp"
+
+            android:layout_marginEnd="3dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_below="@id/chat_date">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/sender_msg"
+                style="@style/style_11_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/send_msg"
+                android:gravity="center_vertical"
+                android:minWidth="70dp"
+                android:minHeight="40dp"
+                android:padding="10dp"
+                android:textColor="@color/black" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/sender_dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/profile"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="3dp" />
+
+
+            <TextView
+                android:id="@+id/send_time"
+                style="@style/style_9_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Mon,Oct 21"
+                android:layout_marginEnd="30dp"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/body_font_color"
+                android:layout_below="@+id/sender_msg"
+                />
+
+
+            <ImageView
+                android:id="@+id/read_check"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/sender_msg"
+                android:src="@drawable/receipt_unread" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</layout>
+

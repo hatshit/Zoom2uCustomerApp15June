@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.zoom2u_customer.ui.application.bottom_navigation.home.home_fragment.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_booking"
+        android:name="com.zoom2u_customer.ui.application.bottom_navigation.bid_request.BidquoteRequestFragment"
+        android:label="@string/booking"
+        tools:layout="@layout/fragment_bidquote_request" />
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.zoom2u_customer.ui.application.bottom_navigation.history.HistoryFragment"
+        android:label="@string/history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.zoom2u_customer.ui.application.bottom_navigation.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

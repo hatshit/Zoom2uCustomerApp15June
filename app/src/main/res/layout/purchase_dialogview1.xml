@@ -1,0 +1,618 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent_cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <include
+            android:id="@id/zoom2u_header"
+            layout="@layout/zoom2u_top_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/shadow_top"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/register1"
+                style="@style/style_15_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Update details"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/next_ll"
+                app:layout_constraintTop_toBottomOf="@id/register1">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/drop_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/white_background"
+                        android:elevation="5dp"
+                        app:layout_constraintBottom_toTopOf="@+id/card1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/purchase_order_txt"
+                            style="@style/style_13_bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Purchase order number"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pur_no"
+                            style="@style/spinner_text_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:hint="Purchase order number"
+                            android:minWidth="200dp"
+                            android:padding="10dp"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/purchase_order_txt" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/card1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/white_background"
+                        android:elevation="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card">
+
+                        <LinearLayout
+                            android:id="@+id/ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_pickup_icon" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/style_13_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:gravity="center"
+                                android:text="@string/pickup_details"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/pick_name"
+                            style="@style/style_13_bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@null"
+                            android:dropDownVerticalOffset="10dp"
+                            android:gravity="center_vertical"
+                            android:hint="@string/contact_name"
+                            android:singleLine="true"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ll" />
+
+                        <View
+                            android:id="@+id/line"
+                            android:layout_width="match_parent"
+                            android:layout_height=".5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/line_color"
+                            app:layout_constraintTop_toBottomOf="@+id/pick_name" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/pick_email"
+                            style="@style/style_13_bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="@string/email_address"
+                            android:singleLine="true"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/line" />
+
+                        <View
+                            android:id="@+id/line1"
+                            android:layout_width="match_parent"
+                            android:layout_height=".5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/line_color"
+                            app:layout_constraintTop_toBottomOf="@+id/pick_email" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/pick_phone"
+                            style="@style/style_13_bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="@string/contact_number"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+                        <View
+                            android:id="@+id/line3"
+                            android:layout_width="match_parent"
+                            android:layout_height=".5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/line_color"
+                            app:layout_constraintTop_toBottomOf="@+id/pick_phone" />
+
+
+                        <LinearLayout
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/company_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="5dp"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toStartOf="@+id/level_ll"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/line3">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/pick_company"
+                                style="@style/style_13_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:hint="@string/company_name"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/line_color" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/level_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical"
+                            android:singleLine="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/company_ll"
+                            app:layout_constraintTop_toBottomOf="@+id/line3">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/pick_unit"
+                                style="@style/style_13_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:hint="@string/level_suit"
+                                android:paddingStart="5dp"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/line_color" />
+
+
+                        </LinearLayout>
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/pick_address"
+                            style="@style/style_13_bold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:clickable="true"
+                            android:editable="false"
+                            android:gravity="bottom"
+                            android:hint="@string/address"
+                            android:maxLines="2"
+                            android:minHeight="40dp"
+                            android:layout_marginBottom="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/pick_find_me"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/company_ll" />
+
+                        <View
+                            android:id="@+id/lined43"
+                            android:layout_width="match_parent"
+                            android:layout_height=".5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/line_color"
+                            app:layout_constraintTop_toBottomOf="@+id/pick_address" />
+
+                        <LinearLayout
+                            android:id="@+id/pick_find_me"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/pick_address"
+                            app:layout_constraintTop_toBottomOf="@+id/company_ll">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="2dp"
+                                android:src="@drawable/ic_find_me" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/style_9_regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/find_me"
+                                android:textColor="@color/base_color" />
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/card2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card1">
+
+                        <LinearLayout
+                            android:id="@+id/ll1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_drop_off_icon" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/style_13_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:gravity="center"
+                                android:text="@string/dropOff_details1"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <AutoCompleteTextView
+                            android:id="@+id/drop_name"
+                            style="@style/style_13_bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="@string/contact_name"
+                            android:singleLine="true"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ll1" />
+
+                        <View
+                            android:id="@+id/lined1"
+                            android:layout_width="match_parent"
+                            android:layout_height=".5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/line_color"
+                            app:layout_constraintTop_toBottomOf="@+id/drop_name" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/drop_email"
+                            style="@style/style_13_bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="@string/email_address"
+                            android:singleLine="true"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/lined1" />
+
+                        <View
+                            android:id="@+id/lined2"
+                            android:layout_width="match_parent"
+                            android:layout_height=".5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/line_color"
+                            app:layout_constraintTop_toBottomOf="@+id/drop_email" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/drop_phone"
+                            style="@style/style_13_bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="@string/contact_number"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/lined2" />
+
+                        <View
+                            android:id="@+id/lined3"
+                            android:layout_width="match_parent"
+                            android:layout_height=".5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/line_color"
+                            app:layout_constraintTop_toBottomOf="@+id/drop_phone" />
+
+
+                        <LinearLayout
+                            android:id="@+id/drop_company_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="5dp"
+                            android:orientation="vertical"
+                            android:singleLine="true"
+                            app:layout_constraintEnd_toStartOf="@+id/drop_level_ll"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/lined3">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/drop_company"
+                                style="@style/style_13_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:hint="@string/company_name"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/line_color" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/drop_level_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical"
+                            android:singleLine="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/drop_company_ll"
+                            app:layout_constraintTop_toBottomOf="@+id/lined3">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/drop_unit"
+                                style="@style/style_13_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:hint="@string/level_suit"
+                                android:paddingStart="5dp"
+                                android:singleLine="true" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/line_color" />
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/drop_address_error"
+                            style="@style/style_13_bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/red"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/drop_company_ll" />
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/drop_address"
+                            style="@style/style_13_bold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:clickable="true"
+                            android:editable="false"
+                            android:gravity="bottom"
+                            android:hint="@string/address"
+                            android:maxLines="2"
+                            android:minHeight="40dp"
+                            app:layout_constraintEnd_toStartOf="@+id/drop_find_me"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/drop_address_error" />
+
+                        <View
+                            android:id="@+id/lined4"
+                            android:layout_width="match_parent"
+                            android:layout_height=".5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/line_color"
+                            app:layout_constraintTop_toBottomOf="@+id/drop_address" />
+
+
+                        <LinearLayout
+                            android:id="@+id/drop_find_me"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/drop_address"
+                            app:layout_constraintTop_toBottomOf="@+id/drop_company_ll">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="2dp"
+                                android:src="@drawable/ic_find_me" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/style_9_regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/find_me"
+                                android:textColor="@color/base_color" />
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/next_ll"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:elevation="40dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/next_btn"
+                    style="@style/style_15_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/chip_background"
+                    android:gravity="center"
+                    android:text="@string/next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

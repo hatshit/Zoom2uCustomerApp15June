@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zoom2u_customer">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".utility.Zoom2u"
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="false"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Zoom2u">
+        <activity android:name=".ui.application.bottom_navigation.bid_request.active_bid_request.active_bid_page.active_bid_offers.payment_heavy.PaymentHeavyActivity"></activity>
+        <activity android:name=".ui.application.bottom_navigation.bid_request.active_bid_request.active_bid_page.active_bid_offers.update_details_heavy.UpdateDetailsHeavyActivity" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.availabilty_delievry.availability_delivery_heavy.AvailabilityDeliveryHeavyFreightDropDateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.availabilty_delievry.availability_delivery_heavy.AvailabilityDeliveryHeavyFreightPickDateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.delivery_details.heavy_freight_bid.HeavyFreightBidActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.delivery_details.dropoff_details.DropOffDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.delivery_details.pickup_details.PickUpDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.availabilty_delievry.AvailabilityDeliveryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.availabilty_delievry.suggest_price.SuggestPriceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.chat.bid_chat.active_bid_chat.ActiveBidMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.chat.message.MessageActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".ui.application.bottom_navigation.home.delivery_details.quotes_req.quote_confirmation_page.QuoteConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.notification.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.delivery_details.quotes_req.UploadQuotesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.booking_confirmation.interstate_booking.InterStateSecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.booking_confirmation.interstate_booking.InterStateFirstScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utility.ShowPdfActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.booking_confirmation.order_confirm_hold.OnHoldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".services.DialogActivity1"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.booking_confirmation.order_confirm_hold.OrderConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utility.FullSizeImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.booking_confirmation.BookingConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.profile.my_location.search_location.Location"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.splash_screen.LogInSignupMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Splash" />
+        <activity
+            android:name=".ui.application.bottom_navigation.BottomNavigationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.profile.edit_profile.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.splash_screen.SplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.application.bottom_navigation.profile.chnage_password.ChangePassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.log_in.forgot_password.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.profile.my_location.edit_add_location.EditAddLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.profile.my_location.MyLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.profile.change_price.PriceChangeActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDXy3Z6OzAQ3siNfARS3Y54-sbhNQSBL0U" />
+
+        <activity
+            android:name=".ui.application.bottom_navigation.bid_request.complete_bid_request.completed_bid_page.CompletedBidActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.bid_request.active_bid_request.active_bid_page.ActiveBidActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.qutote_request.QuoteRequestActivity"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".application.ui.chat.MessageActivity" /> -->
+        <activity
+            android:name=".ui.application.chat.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.history.history_details.HistoryDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.log_in.LogInActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.sign_up.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.application.bottom_navigation.home.map_page.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.bottom_navigation.base_page.BasePageActivity"
+            android:screenOrientation="portrait">
+
+            <!--
+            <intent-filter>
+                <action android:name="openApp" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <service android:name=".services.ServiceNotifyCourierAboutChat" />
+        <service
+            android:name=".services.MyFcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

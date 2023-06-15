@@ -1,0 +1,98 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data/>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_color">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/splash"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"/>
+
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="53dp"
+                android:src="@drawable/zoom2u_icon_black_white"
+                android:id="@+id/logo"
+                android:layout_marginTop="240dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+             />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Australia’s smartest courier"
+                android:id="@+id/textView1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:text="Login or register to start zooming"
+                android:id="@+id/textView2"
+                android:textSize="14sp"
+                android:layout_marginTop="9dp"
+                android:textColor="@color/gun_metal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1"/>
+
+            <TextView
+                android:id="@+id/loginWithEmailBtn"
+                android:layout_width="fill_parent"
+                style="@style/style_15_bold"
+                android:layout_height="56dp"
+                android:textSize="17sp"
+                android:layout_marginTop="26dp"
+                android:text="Login with email"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:background="@drawable/white_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/signUpBtn"
+                style="@style/style_15_bold"
+                android:textSize="17sp"
+                android:layout_width="fill_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="10dp"
+                android:text="Sign up"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/loginWithEmailBtn"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white"
+                android:background="@drawable/sign_up_btn"
+                 />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

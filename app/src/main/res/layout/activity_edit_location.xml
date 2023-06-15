@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data/>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent_cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.application.bottom_navigation.profile.my_location.edit_add_location.EditAddLocationActivity">
+
+
+        <include
+            android:id="@id/zoom2u_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/zoom2u_top_header"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/shadow_top"
+            android:elevation="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/header"
+            style="@style/style_15_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!--<com.google.android.material.textview.MaterialTextView
+            android:id="@+id/save_btn"
+            style="@style/style_15_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/save"
+            android:textColor="@color/base_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/next_ll"
+            app:layout_constraintTop_toBottomOf="@+id/header">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
+                    style="@style/style_13_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/location_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:singleLine="true"/>
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@+id/name" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    style="@style/style_13_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/email_address"
+                    android:singleLine="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@+id/email" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phone"
+                    style="@style/style_13_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:hint="@string/contact_number"
+                    android:inputType="number"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+                <LinearLayout
+                    android:id="@+id/company_ll"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/level_ll"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line3">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/company"
+                        style="@style/style_13_bold"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/company_name" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/line_color" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/level_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:singleLine="true"
+                    android:layout_marginStart="5dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/company_ll"
+                    app:layout_constraintTop_toBottomOf="@+id/line3">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/unit"
+                        style="@style/style_13_bold"
+                        android:paddingStart="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/level_suit" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/line_color" />
+
+
+                </LinearLayout>
+
+
+
+                <TextView
+                        android:id="@+id/address"
+                        style="@style/style_13_bold"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:layout_marginTop="5dp"
+                        android:gravity="bottom"
+                        android:paddingBottom="5dp"
+                        android:hint="@string/address"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/company_ll"
+                        app:layout_constraintEnd_toStartOf="@+id/find_me"
+
+                        />
+
+
+                    <LinearLayout
+                        android:id="@+id/find_me"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="14dp"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toEndOf="@+id/address"
+                        app:layout_constraintTop_toBottomOf="@+id/company_ll"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:src="@drawable/ic_find_me" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/style_9_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/find_me"
+                            android:textColor="@color/base_color" />
+
+                    </LinearLayout>
+
+
+
+                <View
+                    android:id="@+id/line4"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@+id/address" />
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:paddingTop="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Any special delivery instruction \n \n (eg. Meet me at the lobby)"
+                    style="@style/style_13_bold"
+                    app:layout_constraintTop_toBottomOf="@+id/line4"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <View
+                    android:id="@+id/line5"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@+id/notes" />
+
+
+                <CheckBox
+                    android:id="@+id/pickup_check_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="@color/base_color"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp"
+                    android:text="@string/pickup_location"
+                    app:layout_constraintTop_toBottomOf="@+id/line5"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/dropOff_check_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:buttonTint="@color/base_color"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp"
+                    android:text="@string/drop_location"
+                    app:layout_constraintTop_toBottomOf="@+id/pickup_check_box"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/remove_cl"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/dropOff_check_box"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <View
+                        android:id="@+id/line6"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/line_color"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/remove_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintTop_toBottomOf="@+id/line6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textColor="@color/red"
+                        android:text="@string/remove"
+                        style="@style/style_13_bold" />
+
+
+                    <View
+                        android:id="@+id/line7"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/line_color"
+                        app:layout_constraintTop_toBottomOf="@id/remove_txt"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <View
+                    android:id="@+id/blank_view"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintTop_toBottomOf="@+id/remove_cl"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+            <LinearLayout
+                android:id="@+id/next_ll"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:elevation="40dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <Button
+                    android:id="@+id/save_change_btn"
+                    style="@style/style_15_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/chip_background"
+                    android:text="@string/save_location"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

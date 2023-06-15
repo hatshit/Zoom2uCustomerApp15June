@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/white_background"
+    >
+
+    <TextView
+        android:id="@+id/dialogLogoutTitleText"
+        style="@style/style_15_bold"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:gravity="center_vertical"
+
+        android:paddingLeft="10dp"
+        android:text="@string/update_details"
+        android:textColor="@color/text_color1"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/dialogLogoutTitleText"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FF476A" />
+
+
+
+
+    <TextView
+        android:id="@+id/dialogLogoutMessageText"
+        style="@style/style_15_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogLogoutTitleText"
+        android:layout_margin="5dp"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginStart="5dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
+        android:text="Purchase order number"
+        android:textColor="@color/text_color1"
+        android:textSize="14dp" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/pur_no"
+        android:textSize="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/dialogLogoutMessageText"
+        android:background="@drawable/location_box"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="5dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/pur_no"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:weightSum="1"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        >
+
+        <TextView
+            style="@style/style_15_bold"
+            android:layout_height="50dp"
+            android:layout_width="80dp"
+            android:id="@+id/cancel"
+            android:layout_weight=".5"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="Cancel"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/gray_background"
+            android:textColor="@color/white"
+            />
+
+
+        <!--  <View
+              android:id="@+id/line2"
+              android:layout_width="0.5dp"
+              android:layout_height="match_parent"
+              android:background="#FF476A" />
+  -->
+
+
+        <TextView
+            android:layout_height="50dp"
+            android:layout_width="80dp"
+            style="@style/style_15_bold"
+            android:id="@+id/ok"
+            android:text="Ok"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/chip_background"
+            android:textSize="16sp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:layout_weight=".5"
+            android:layout_marginTop="1dp"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
