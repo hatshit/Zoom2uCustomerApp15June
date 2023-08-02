@@ -319,5 +319,6 @@
     <string name="request_quotes">Request Quotes</string>
     <string name="drop_off">Drop Off</string>
     <string name="availability_amp_delivery"><![CDATA[Availability & Delivery]]></string>
+    <string name="logout">Logout</string>
 
 </resources>

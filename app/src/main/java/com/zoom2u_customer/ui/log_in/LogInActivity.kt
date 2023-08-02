@@ -4,16 +4,22 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
+import android.widget.Toast
+import android.window.SplashScreen
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.google.gson.Gson
 import com.zoom2u_customer.R
 import com.zoom2u_customer.apiclient.ApiClient
 import com.zoom2u_customer.apiclient.ServiceApi
 import com.zoom2u_customer.databinding.ActivityLogInBinding
 import com.zoom2u_customer.ui.application.bottom_navigation.base_page.BasePageActivity
+import com.zoom2u_customer.ui.application.bottom_navigation.profile.ProfileResponse
 import com.zoom2u_customer.ui.log_in.forgot_password.ForgotPasswordActivity
 import com.zoom2u_customer.ui.sign_up.SignUpActivity
+import com.zoom2u_customer.ui.splash_screen.LogInSignupMainActivity
+import com.zoom2u_customer.utility.AppPreference
 import com.zoom2u_customer.utility.AppUtility
 import com.zoom2u_customer.utility.DialogActivity
 
@@ -42,7 +48,24 @@ class LogInActivity : AppCompatActivity(), View.OnClickListener {
         viewModel.repository = repository
 
         viewModel.getLoginSuccess()?.observe(this) {
-            if (!TextUtils.isEmpty(it)) {
+
+            try {
+                AppUtility.progressBarDissMiss()
+                if(it.success.equals("true")) {
+                    if (it.isSuspendedWithUnpaidDues.equals("false")) {
+                        val intent = Intent(this, BasePageActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }else {
+                        onOkClick()
+                    }
+                }else {
+                    DialogActivity.alertDialogSingleButton(this, "Alert!", it.success)
+                }
+            }catch (ex:Exception) {
+                ex.printStackTrace()
+            }
+           /* if (!TextUtils.isEmpty(it)) {
                 AppUtility.progressBarDissMiss()
                 if (it.equals("true")) {
                     val intent = Intent(this, BasePageActivity::class.java)
@@ -50,8 +73,7 @@ class LogInActivity : AppCompatActivity(), View.OnClickListener {
                     finish()
                 } else
                     DialogActivity.alertDialogSingleButton(this, "Alert!", it)
-
-            }
+            }*/
         }
 
        /* binding.emailHeader.isF
@@ -62,7 +84,19 @@ class LogInActivity : AppCompatActivity(), View.OnClickListener {
     }
 
 
+    private fun onOkClick() {
+        val loginResponse: LoginResponse? = AppPreference.getSharedPrefInstance().getLoginResponse()
+        loginResponse?.access_token = ""
+        AppPreference.getSharedPrefInstance().setLoginResponse(Gson().toJson(loginResponse))
+        val profileResponse: ProfileResponse? = AppPreference.getSharedPrefInstance().getProfileData()
+        profileResponse?.FirstName = ""
+        AppPreference.getSharedPrefInstance().setProfileData(Gson().toJson(profileResponse))
 
+        val intent = Intent(this@LogInActivity, LoginSuspendedAct::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        startActivity(intent)
+           finish()
+    }
 
 
     override fun onClick(view: View?) {

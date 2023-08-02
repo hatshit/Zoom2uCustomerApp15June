@@ -5,20 +5,20 @@ import androidx.lifecycle.ViewModel
 
 
 class LoginViewModel : ViewModel(){
-    var success:MutableLiveData<String>? =MutableLiveData("")
+    var success:MutableLiveData<LoginReprocess>? =MutableLiveData()
 
    var repository: LoginRepository? = null
 
     fun getLogin(loginRequest: LoginRequest) = repository?.getLoginFromRepo(loginRequest,onSuccess = ::onSuccess)
 
 
-    fun onSuccess(msg:String){
-        success?.value=msg
+    fun onSuccess(msg:String,isSuspendedWithUnpaidDues:String){
+        success?.value=LoginReprocess(msg,isSuspendedWithUnpaidDues)
 
     }
 
 
-    fun getLoginSuccess():MutableLiveData<String>?{
+    fun getLoginSuccess(): MutableLiveData<LoginReprocess>? {
         return success
     }
 }

@@ -12,16 +12,15 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
+import org.json.JSONObject
 import retrofit2.Response
 import java.util.*
 
 class LoginRepository (private var serviceApi: ServiceApi, var context: Context) {
-
-
     fun getLoginFromRepo(
         loginRequest: LoginRequest,
         disposable: CompositeDisposable = CompositeDisposable(),
-        onSuccess: (msg: String) -> Unit
+        onSuccess: (msg: String,isSuspendedWithUnpaidDues: String) -> Unit
     ) {
         if (AppUtility.isInternetConnected()) {
             AppUtility.progressBarShow(context)
@@ -40,9 +39,20 @@ class LoginRepository (private var serviceApi: ServiceApi, var context: Context)
                                 responce.body()?.addProperty("email",loginRequest.username)
                                 AppPreference.getSharedPrefInstance()
                                     .setLoginResponse(Gson().toJson(responce.body()))
-                                onSuccess("true")
+                                val jsonObj = JSONObject(responce.body().toString())
+                                if (jsonObj.has("isSuspendedWithUnpaidDues")) {
+                                    val isSuspendedWithUnpaidDues = jsonObj.optBoolean("isSuspendedWithUnpaidDues", false)
+                                   if(isSuspendedWithUnpaidDues) {
+                                       onSuccess("true",isSuspendedWithUnpaidDues.toString())
+                                   }else {
+                                       onSuccess("true",isSuspendedWithUnpaidDues.toString())
+                                   }
+
+                                }else {
+                                    onSuccess("true","")
+                                }
                             } else if (responce.errorBody() != null) {
-                                onSuccess("Username password combination is incorrect. Check for spelling errors, spaces in email password, or automatic capitalisation")
+                                onSuccess("Username password combination is incorrect. Check for spelling errors, spaces in email password, or automatic capitalisation","")
                             }
                         }
 

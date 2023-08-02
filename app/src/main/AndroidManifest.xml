@@ -17,7 +17,10 @@
         android:resizeableActivity="false"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zoom2u">
-        <activity android:name=".ui.application.bottom_navigation.bid_request.active_bid_request.active_bid_page.active_bid_offers.payment_heavy.PaymentHeavyActivity"></activity>
+        <activity
+            android:name=".ui.log_in.LoginSuspendedAct"
+            android:exported="false" />
+        <activity android:name=".ui.application.bottom_navigation.bid_request.active_bid_request.active_bid_page.active_bid_offers.payment_heavy.PaymentHeavyActivity" />
         <activity android:name=".ui.application.bottom_navigation.bid_request.active_bid_request.active_bid_page.active_bid_offers.update_details_heavy.UpdateDetailsHeavyActivity" />
         <activity
             android:name=".ui.application.bottom_navigation.home.availabilty_delievry.availability_delivery_heavy.AvailabilityDeliveryHeavyFreightDropDateActivity"
